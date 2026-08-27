@@ -16,19 +16,6 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 
 ---
 
-## 📂 Project Details
-
-### 🌟 Day 1: Invalid Input Shake Effect
-A simple form validation UI component that provides visual feedback to the user by shaking the input field and showing an error message if empty input is submitted.
-
-- **Features**:
-  - Empty input validation.
-  - CSS keyframe animation for shake effect.
-  - Dynamic error message visibility with auto-reset using `setTimeout`.
-- **Folder**: [`DAY 1/`](./DAY%201/)
-
----
-
 ## 🛠️ How to Run Locally
 
 1. **Clone the repository:**
