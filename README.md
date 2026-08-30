@@ -9,8 +9,9 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | Day | Project Name | Tech Stack | Status | Folder Link |
 |:---:|:---|:---|:---:|:---:|
 | **01** | **Invalid Input Shake Effect** | HTML, CSS, JavaScript | ✅ Done | [Day 1](./DAY%201/) |
-| **02** | *Coming Soon* | - | ⏳ Pending | - |
-| **03** | *Coming Soon* | - | ⏳ Pending | - |
+| **02** | **Box Shadow Generator** | HTML, CSS, JavaScript | ✅ Done | [Day 2](./DAY%202/) |
+| **03** | **Notes Application** | HTML, CSS, JavaScript, LocalStorage | ✅ Done | [Day 3](./DAY%203/) |
+| **04** | *Coming Soon* | - | ⏳ Pending | - |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
