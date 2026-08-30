@@ -11,7 +11,8 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **01** | **Invalid Input Shake Effect** | HTML, CSS, JavaScript | ✅ Done | [Day 1](./DAY%201/) |
 | **02** | **Box Shadow Generator** | HTML, CSS, JavaScript | ✅ Done | [Day 2](./DAY%202/) |
 | **03** | **Notes Application** | HTML, CSS, JavaScript, LocalStorage | ✅ Done | [Day 3](./DAY%203/) |
-| **04** | *Coming Soon* | - | ⏳ Pending | - |
+| **04** | **FD Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 4](./DAY%204/) |
+| **05** | *Coming Soon* | - | ⏳ Pending | - |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
