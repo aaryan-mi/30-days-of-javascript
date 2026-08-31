@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Generator | Day 5</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> DAY 05 OF 30</span>
+            <h1>CSS Gradient Generator</h1>
+            <p>Design, customize, and export stunning CSS gradients in real-time</p>
+        </header>
+
+        <!-- Main Card -->
+        <main class="generator-card">
+            
+            <!-- Live Preview Window -->
+            <div class="preview-panel">
+                <div class="preview-box" id="gradientPreview">
+                    <span class="preview-badge" id="previewBadge">135° Linear</span>
+                </div>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls-panel">
+                
+                <!-- Gradient Mode / Type Tabs -->
+                <div class="control-group">
+                    <label class="group-title"><i class="fa-solid fa-layer-group"></i> Gradient Type</label>
+                    <div class="type-toggle">
+                        <button type="button" class="type-btn active" data-type="linear">Linear</button>
+                        <button type="button" class="type-btn" data-type="radial">Radial</button>
+                        <button type="button" class="type-btn" data-type="conic">Conic</button>
+                    </div>
+                </div>
+
+                <!-- Color Pickers -->
+                <div class="control-group">
+                    <label class="group-title"><i class="fa-solid fa-palette"></i> Color Stops</label>
+                    <div class="color-stops-grid">
+                        <div class="color-input-card">
+                            <label for="colorA">Color 1</label>
+                            <div class="color-picker-wrap">
+                                <input type="color" id="colorA" value="#6366f1">
+                                <span class="hex-text" id="hexA">#6366F1</span>
+                            </div>
+                        </div>
+
+                        <div class="swap-action">
+                            <button id="swapColorsBtn" title="Swap Colors" aria-label="Swap Colors">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </button>
+                        </div>
+
+                        <div class="color-input-card">
+                            <label for="colorB">Color 2</label>
+                            <div class="color-picker-wrap">
+                                <input type="color" id="colorB" value="#ec4899">
+                                <span class="hex-text" id="hexB">#EC4899</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direction Controls (Linear / Conic) -->
+                <div class="control-group" id="directionControlGroup">
+                    <div class="group-header-flex">
+                        <label class="group-title"><i class="fa-regular fa-compass"></i> Direction & Angle</label>
+                        <span class="angle-val-badge" id="angleDisplay">135°</span>
+                    </div>
+
+                    <!-- 8 Direction Quick Buttons -->
+                    <div class="direction-grid">
+                        <button class="dir-btn" data-angle="0" data-direction="to top" title="To Top">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="45" data-direction="to top right" title="To Top Right">
+                            <i class="fas fa-arrow-up diag-45"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="90" data-direction="to right" title="To Right">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="dir-btn active" data-angle="135" data-direction="to bottom right" title="To Bottom Right">
+                            <i class="fas fa-arrow-down diag-minus-45"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="180" data-direction="to bottom" title="To Bottom">
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="225" data-direction="to bottom left" title="To Bottom Left">
+                            <i class="fas fa-arrow-down diag-45"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="270" data-direction="to left" title="To Left">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="dir-btn" data-angle="315" data-direction="to top left" title="To Top Left">
+                            <i class="fas fa-arrow-up diag-minus-45"></i>
+                        </button>
+                    </div>
+
+                    <!-- Fine-tune Angle Slider -->
+                    <div class="slider-wrapper">
+                        <input type="range" id="angleSlider" min="0" max="360" value="135">
+                    </div>
+                </div>
+
+                <!-- Radial Shape Control (Shown only in Radial Mode) -->
+                <div class="control-group hidden" id="radialControlGroup">
+                    <label class="group-title"><i class="fa-solid fa-shapes"></i> Radial Shape</label>
+                    <div class="type-toggle">
+                        <button type="button" class="radial-shape-btn active" data-shape="circle">Circle</button>
+                        <button type="button" class="radial-shape-btn" data-shape="ellipse">Ellipse</button>
+                    </div>
+                </div>
+
+                <!-- Presets Section -->
+                <div class="control-group">
+                    <label class="group-title"><i class="fa-solid fa-fire"></i> Trending Presets</label>
+                    <div class="presets-row">
+                        <button class="preset-pill" data-c1="#ff6b6b" data-c2="#556270" style="background: linear-gradient(135deg, #ff6b6b, #556270)">Sunset Coral</button>
+                        <button class="preset-pill" data-c1="#4facfe" data-c2="#00f2fe" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">Ocean Breeze</button>
+                        <button class="preset-pill" data-c1="#f857a6" data-c2="#ff5858" style="background: linear-gradient(135deg, #f857a6, #ff5858)">Neon Berry</button>
+                        <button class="preset-pill" data-c1="#11998e" data-c2="#38ef7d" style="background: linear-gradient(135deg, #11998e, #38ef7d)">Mint Lush</button>
+                        <button class="preset-pill" data-c1="#8a2387" data-c2="#e94057" style="background: linear-gradient(135deg, #8a2387, #e94057)">Cosmic Sky</button>
+                        <button class="preset-pill" data-c1="#f12711" data-c2="#f5af19" style="background: linear-gradient(135deg, #f12711, #f5af19)">Solar Flare</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons: Randomize & Body Background Toggle -->
+                <div class="actions-row">
+                    <button class="action-btn secondary" id="randomizeBtn">
+                        <i class="fa-solid fa-dice"></i> Randomize
+                    </button>
+                    <button class="action-btn secondary" id="toggleBgBtn">
+                        <i class="fa-solid fa-expand"></i> Apply to Body
+                    </button>
+                </div>
+
+                <!-- Output CSS Area -->
+                <div class="output-container">
+                    <div class="output-header">
+                        <span><i class="fa-solid fa-code"></i> Generated CSS</span>
+                        <span class="syntax-badge">CSS3</span>
+                    </div>
+                    <div class="code-box-wrapper">
+                        <textarea id="cssCodeOutput" readonly rows="2" spellcheck="false"></textarea>
+                        <button id="copyCssBtn" class="copy-btn" title="Copy to clipboard">
+                            <i class="fa-regular fa-clone"></i>
+                            <span class="copy-label">Copy</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>CSS code copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
