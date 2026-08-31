@@ -9,7 +9,7 @@ function generateShadow(){
     const shadowParams = getShadowParams();
     const boxShadow = createBoxShadow(...shadowParams);
     applyShadow(elem,boxShadow);
-    upadateCode(boxShadow);
+    updateCode(boxShadow);
    
 }
 
@@ -38,22 +38,22 @@ function createBoxShadow(hShadow,vShadow,blurRadius,spreadRadius,color,opacity,i
 
 }
 
-function hexToRgba(color,opacity){   ///  #ffee22
+function hexToRgba(color, opacity) {
 
-    const r = parseInt(color.substr(1,2), 16);
-    const g = parseInt(color.substr(3,2), 16);
-    const b = parseInt(color.substr(5,2), 16);
+    const r = parseInt(color.substr(1, 2), 16);
+    const g = parseInt(color.substr(3, 2), 16);
+    const b = parseInt(color.substr(5, 2), 16);
 
     return `rgba(${r},${g},${b},${opacity})`;
 
 }
 
-function applyShadow(element,boxShadow){
+function applyShadow(element, boxShadow) {
     element.style.boxShadow = boxShadow;
 }
 
-function upadateCode(text){
-    code.textContent = `box-Shadow: ${text}`;
+function updateCode(text) {
+    code.textContent = `box-Shadow: ${text};`;
 }
 
 function copyCode(){

@@ -47,8 +47,6 @@ function updateNote(id,content){
 
 
 function addNote(){
-    // id , content
-
     const notes = getNotes();
 
     const noteObj = {

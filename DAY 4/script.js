@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     interestRateInput.addEventListener("input",function(){
-        upadteInterestRateValue(this.value);
+        updateInterestRateValue(this.value);
     });
 
     timePeriodInput.addEventListener("input",function(){
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     updateInvestmentValue(investmentInput.value);
-    upadteInterestRateValue(interestRateInput.value);
+    updateInterestRateValue(interestRateInput.value);
     updateTimePeriodValue(timePeriodInput.value);
 });
 
@@ -27,7 +27,7 @@ function updateInvestmentValue(value){
     document.getElementById("investment-value").innerText = `${parseFloat(value).toLocaleString('en-IN')}`;
 }
 
-function upadteInterestRateValue(value){
+function updateInterestRateValue(value){
     document.getElementById("interest-rate-value").innerText = `${parseFloat(value).toFixed(1)}%`;
 }
 
