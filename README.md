@@ -13,6 +13,7 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **03** | **Notes Application** | HTML, CSS, JavaScript, LocalStorage | ✅ Done | [Day 3](./DAY%203/) |
 | **04** | **FD Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 4](./DAY%204/) |
 | **05** | **Gradient Generator** | HTML, CSS, JavaScript | ✅ Done | [Day 5](./DAY%205/) |
+| **06** | **BMI Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 6](./DAY%206/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 

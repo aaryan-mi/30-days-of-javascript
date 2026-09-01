@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - BMI Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator-card">
+        <header class="card-header">
+            <div class="header-icon">⚖️</div>
+            <h1>BMI Calculator</h1>
+            <p class="subtitle">Calculate your Body Mass Index and monitor your health metrics</p>
+        </header>
+
+        <form id="bmi-form" onsubmit="event.preventDefault(); calculateBMI();">
+            <!-- Gender Selection -->
+            <div class="form-group">
+                <label class="group-label">Gender</label>
+                <div class="gender-selector">
+                    <label class="gender-option">
+                        <input type="radio" id="male" name="gender" value="male" checked onchange="calculateBMI()">
+                        <span class="gender-btn">
+                            <span class="gender-icon">♂</span>
+                            <span>Male</span>
+                        </span>
+                    </label>
+                    <label class="gender-option">
+                        <input type="radio" id="female" name="gender" value="female" onchange="calculateBMI()">
+                        <span class="gender-btn">
+                            <span class="gender-icon">♀</span>
+                            <span>Female</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Age Input -->
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="age" class="group-label">Age</label>
+                    <span class="unit-text">Years</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="number" id="age" name="age" min="2" max="120" value="25" placeholder="Enter age" oninput="calculateBMI()" required>
+                </div>
+            </div>
+
+            <!-- Height Slider -->
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="height" class="group-label">Height</label>
+                    <div class="val-display"><span id="height-value">170</span> <small>cm</small></div>
+                </div>
+                <input 
+                    type="range" 
+                    name="height" 
+                    id="height" 
+                    min="90" 
+                    max="220" 
+                    value="170" 
+                    oninput="updateHeightValue(this.value)"
+                >
+                <div class="range-labels">
+                    <span>90 cm</span>
+                    <span>155 cm</span>
+                    <span>220 cm</span>
+                </div>
+            </div>
+
+            <!-- Weight Slider -->
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="weight" class="group-label">Weight</label>
+                    <div class="val-display"><span id="weight-value">68</span> <small>kg</small></div>
+                </div>
+                <input 
+                    type="range" 
+                    name="weight" 
+                    id="weight" 
+                    min="30" 
+                    max="180" 
+                    value="68" 
+                    oninput="updateWeightValue(this.value)"
+                >
+                <div class="range-labels">
+                    <span>30 kg</span>
+                    <span>105 kg</span>
+                    <span>180 kg</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="actions-group">
+                <button type="button" class="btn-secondary" onclick="resetCalculator()">Reset</button>
+                <button type="submit" class="btn-primary">Calculate BMI</button>
+            </div>
+        </form>
+
+        <!-- Result Section -->
+        <section class="result-card" id="result-card" aria-live="polite">
+            <div class="result-header">
+                <span class="result-title">Your BMI Score</span>
+                <span class="category-badge badge-normal" id="bmi-badge">Normal Weight</span>
+            </div>
+
+            <div class="score-display">
+                <span class="score-value" id="bmi-result">23.5</span>
+                <span class="score-unit">kg/m²</span>
+            </div>
+
+            <!-- Gauge Meter Bar -->
+            <div class="gauge-container">
+                <div class="gauge-bar">
+                    <span class="seg seg-underweight" title="Underweight (< 18.5)"></span>
+                    <span class="seg seg-normal" title="Normal (18.5 - 24.9)"></span>
+                    <span class="seg seg-overweight" title="Overweight (25 - 29.9)"></span>
+                    <span class="seg seg-obese" title="Obese (≥ 30)"></span>
+                    <div class="gauge-pointer" id="gauge-pointer" style="left: 42%;"></div>
+                </div>
+                <div class="gauge-labels">
+                    <span>Underweight</span>
+                    <span>Normal</span>
+                    <span>Overweight</span>
+                    <span>Obese</span>
+                </div>
+            </div>
+
+            <p class="summary-text" id="bmi-summary">You have a healthy body weight. Maintain your balanced routine!</p>
+            
+            <div class="healthy-range-box">
+                <span class="hr-title">💡 Ideal weight range for your height:</span>
+                <span class="hr-value" id="healthy-range">53.5 kg – 72.0 kg</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
