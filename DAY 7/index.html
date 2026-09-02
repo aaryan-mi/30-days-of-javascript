@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Tip Calculator</h1>
+        </header>
+
+        <!-- Bill & Overall Totals -->
+        <section class="calc-section">
+            <div class="wrapper">
+                <label for="bill" class="lbl">Bill</label>
+                <div class="input-box">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" value="0.00" id="bill" class="val" step="0.01" min="0" placeholder="0.00">
+                </div>
+            </div>
+            
+            <hr class="divider">
+            
+            <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span id="tip-amount" class="val">$0.00</span>
+            </div>
+
+            <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span id="total-amount" class="val">$0.00</span>
+            </div>
+        </section>
+
+        <!-- Tip % and Split Controls -->
+        <section class="calc-section">
+            <div class="wrapper">
+                <label for="tip" class="lbl">Tip %</label>
+                <span id="tip-percent" class="val">15%</span>
+            </div>
+            <input type="range" min="0" max="100" id="tip" value="15" aria-label="Tip Percentage">
+
+            <div class="wrapper split-wrapper">
+                <label for="no-of-people" class="lbl">No. of People</label>
+                <span id="split-num" class="val">1</span>
+            </div>
+            <input type="range" min="1" max="25" id="no-of-people" value="1" aria-label="Number of People">
+        </section>
+
+        <!-- Per Person Summary -->
+        <section class="calc-section summary-card">
+            <div class="wrapper">
+                <span class="lbl">Tip Per Person</span>
+                <span id="tip-per-person" class="val">$0.00</span>
+            </div>
+
+            <div class="wrapper">
+                <span class="lbl">Total Per Person</span>
+                <span id="total-per-person" class="val">$0.00</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

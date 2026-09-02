@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #1e1b4b, #0f172a 70%);
+    padding: 20px;
+}
+
+.container {
+    background: linear-gradient(145deg, #4f46e5, #7c3aed);
+    width: 100%;
+    max-width: 440px;
+    padding: 38px 32px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5), 0 0 35px rgba(99, 102, 241, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #10b981;
+    border-radius: 2px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.lbl {
+    font-size: 15px;
+    color: #e0e7ff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.val {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.input-box {
+    background-color: #ffffff;
+    color: #4f46e5;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.25s ease;
+}
+
+.input-box:focus-within {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+.currency-symbol {
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 4px;
+    color: #4f46e5;
+}
+
+#bill {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100px;
+    text-align: right;
+    color: #4f46e5;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+#bill::-webkit-inner-spin-button,
+#bill::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.divider {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    margin: 14px 0;
+}
+
+.calc-section:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.split-wrapper {
+    margin-top: 18px;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    margin-top: 4px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #10b981;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background-color: #34d399;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #10b981;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.summary-card .lbl {
+    color: #4b5563;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.summary-card .val {
+    color: #4338ca;
+    font-size: 20px;
+    font-weight: 700;
+}

@@ -14,6 +14,7 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **04** | **FD Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 4](./DAY%204/) |
 | **05** | **Gradient Generator** | HTML, CSS, JavaScript | ✅ Done | [Day 5](./DAY%205/) |
 | **06** | **BMI Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 6](./DAY%206/) |
+| **07** | **Tip Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 7](./DAY%207/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
