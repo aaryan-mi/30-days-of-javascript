@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob Maker | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrapper">
+        <header class="header">
+            <h1>CSS Blob Generator</h1>
+            <p>Design organic blob shapes & copy the generated CSS</p>
+        </header>
+
+        <section class="output">
+            <div class="blob" id="blob"></div>
+        </section>
+
+        <section class="dimensions">
+            <div class="dim-group">
+                <label for="blob-height">Height (px)</label>
+                <input type="number" value="200" min="50" max="320" id="blob-height">
+            </div>
+            <div class="dim-group">
+                <label for="blob-width">Width (px)</label>
+                <input type="number" value="200" min="50" max="320" id="blob-width">
+            </div>
+        </section>
+
+        <section class="sliders">
+            <div class="slider-item">
+                <label>Top-Left / Top-Right</label>
+                <input type="range" min="0" max="100" value="30" aria-label="Radius One">
+            </div>
+            <div class="slider-item">
+                <label>Top-Right / Bottom-Right</label>
+                <input type="range" min="0" max="100" value="80" aria-label="Radius Two">
+            </div>
+            <div class="slider-item">
+                <label>Bottom-Right / Bottom-Left</label>
+                <input type="range" min="0" max="100" value="60" aria-label="Radius Three">
+            </div>
+            <div class="slider-item">
+                <label>Bottom-Left / Top-Left</label>
+                <input type="range" min="0" max="100" value="40" aria-label="Radius Four">
+            </div>
+        </section>
+
+        <section class="code-container">
+            <input type="text" id="css-code" readonly aria-label="Generated CSS code">
+            <button id="copy" type="button">Copy CSS</button>
+        </section>
+    </main>
+
+    <div id="toast" class="toast">CSS Code Copied to Clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
