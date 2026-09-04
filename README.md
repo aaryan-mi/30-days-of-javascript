@@ -16,6 +16,7 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **06** | **BMI Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 6](./DAY%206/) |
 | **07** | **Tip Calculator** | HTML, CSS, JavaScript | ✅ Done | [Day 7](./DAY%207/) |
 | **08** | **Blob Maker** | HTML, CSS, JavaScript | ✅ Done | [Day 8](./DAY%208/) |
+| **09** | **Basic Image Editor** | HTML, CSS, JavaScript, Canvas API | ✅ Done | [Day 9](./DAY%209/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 

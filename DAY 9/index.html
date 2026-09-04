@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Image Editor | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="wrapper">
+        <header class="app-header">
+            <h1>Image Editor Studio</h1>
+            <p>Customize filters, flip perspectives, and export your edited photos</p>
+        </header>
+
+        <div class="editor-grid">
+            <!-- Filter Controls Panel -->
+            <section class="editor-panel">
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <label for="blur">Blur</label>
+                        <span class="range-value" id="blur-value">0px</span>
+                    </div>
+                    <input type="range" min="0" max="10" value="0" step="0.1" id="blur" aria-label="Blur Filter">
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <label for="contrast">Contrast</label>
+                        <span class="range-value" id="contrast-value">100%</span>
+                    </div>
+                    <input type="range" min="0" max="200" value="100" id="contrast" aria-label="Contrast Filter">
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <label for="hue-rotate">Hue Rotate</label>
+                        <span class="range-value" id="hue-rotate-value">0°</span>
+                    </div>
+                    <input type="range" min="0" max="360" value="0" id="hue-rotate" aria-label="Hue Rotate Filter">
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <label for="sepia">Sepia</label>
+                        <span class="range-value" id="sepia-value">0%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="0" id="sepia" aria-label="Sepia Filter">
+                </div>
+
+                <div class="flip-section">
+                    <span class="section-title">Transform & Flip</span>
+                    <div class="flip-buttons">
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="no-flip" value="none" checked>
+                            <label for="no-flip">Normal</label>
+                        </div>
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="flip-x" value="x">
+                            <label for="flip-x">Flip Horizontal</label>
+                        </div>
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="flip-y" value="y">
+                            <label for="flip-y">Flip Vertical</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="reset-button" class="btn-secondary" type="button">Reset Filters</button>
+            </section>
+
+            <!-- Preview & Actions Panel -->
+            <section class="result-panel">
+                <div class="image-stage" id="image-stage">
+                    <div class="placeholder-box" id="placeholder-box">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                            <circle cx="9" cy="9" r="2"/>
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        </svg>
+                        <span>No image loaded. Please upload a photo to start editing.</span>
+                    </div>
+                    <figure class="image-container" id="image-container">
+                        <img id="chosen-image" alt="Uploaded preview">
+                    </figure>
+                </div>
+
+                <div class="action-buttons">
+                    <input type="file" id="upload-button" accept="image/*">
+                    <label for="upload-button" class="btn-primary">Choose Image</label>
+                    <button id="download-button" class="btn-action" disabled>Download Image</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
