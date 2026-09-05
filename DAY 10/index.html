@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Character Counter | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>Character Counter</h1>
+            <p>Real-time character tracking and word analytics</p>
+        </header>
+
+        <section class="counter-display">
+            <div class="primary-stat">
+                <span id="char-count" class="stat-number">0</span>
+                <span class="stat-label">Total Characters</span>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span id="char-no-space-count" class="mini-number">0</span>
+                    <span class="mini-label">No Spaces</span>
+                </div>
+                <div class="stat-card">
+                    <span id="word-count" class="mini-number">0</span>
+                    <span class="mini-label">Words</span>
+                </div>
+                <div class="stat-card">
+                    <span id="space-count" class="mini-number">0</span>
+                    <span class="mini-label">Spaces</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <textarea id="text-input" placeholder="Type or paste your text here..." rows="5" aria-label="Text Input Area"></textarea>
+            
+            <div class="input-actions">
+                <button id="copy-btn" class="btn-action" type="button">Copy Text</button>
+                <button id="clear-btn" class="btn-action btn-clear" type="button">Clear</button>
+            </div>
+        </section>
+
+        <footer class="disclaimer">
+            <p>💡 <span>Note:</span> Character count includes spaces, numbers, punctuation, and special characters.</p>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast">Text copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
