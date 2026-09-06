@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="slider-wrapper">
+        <header class="header">
+            <h1>Image Slider</h1>
+            <p>Smooth transitions, responsive pagination, and keyboard controls</p>
+        </header>
+
+        <section class="slider-container" id="slider-container" aria-roledescription="carousel">
+            <!-- Slide Counter Badge -->
+            <div class="slide-badge" id="slide-badge">01 / 04</div>
+
+            <!-- Slides List -->
+            <div class="slides-viewport">
+                <div class="slide active">
+                    <img src="img1.jpg" alt="Virat Kohli - World Cup celebration">
+                </div>
+                <div class="slide">
+                    <img src="img2.jpg" alt="Virat Kohli - RCB portrait">
+                </div>
+                <div class="slide">
+                    <img src="img3.jpg" alt="Virat Kohli - Test match appearance">
+                </div>
+                <div class="slide">
+                    <img src="img4.jpg" alt="Virat Kohli - Batting in match">
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prev" class="nav-btn prev-btn" aria-label="Previous Slide">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="next" class="nav-btn next-btn" aria-label="Next Slide">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </section>
+
+        <!-- Pagination Dots -->
+        <div class="dot-container" id="dot-container" role="tablist" aria-label="Slide Selector">
+            <button class="dot active" data-index="0" role="tab" aria-label="Slide 1"></button>
+            <button class="dot" data-index="1" role="tab" aria-label="Slide 2"></button>
+            <button class="dot" data-index="2" role="tab" aria-label="Slide 3"></button>
+            <button class="dot" data-index="3" role="tab" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="slider-instructions">
+            <span>Use <strong>&larr;</strong> and <strong>&rarr;</strong> keys to navigate slides</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
