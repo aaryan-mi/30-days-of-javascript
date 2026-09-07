@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card-wrapper">
+        <header class="header">
+            <div class="date-badge" id="current-date">Loading date...</div>
+            <div class="clock-display" id="live-clock">00:00:00 AM</div>
+        </header>
+
+        <section class="main-display" id="main-display">
+            <div class="today-tag" id="today-tag">TODAY IS</div>
+            <div class="weekday-row">
+                <span class="day-icon" id="day-icon">🚀</span>
+                <h1 id="weekday">Monday</h1>
+            </div>
+            <div class="vibe-pill" id="vibe-pill">Fresh Start & Momentum</div>
+            <blockquote class="quote-box">
+                <p id="phrase">"Set the tone for the rest of your week with focused energy!"</p>
+            </blockquote>
+        </section>
+
+        <!-- Interactive Weekday Navigation Pills -->
+        <section class="week-selector">
+            <span class="selector-title">Explore Days of the Week</span>
+            <div class="day-pills" id="day-pills">
+                <button class="pill" data-day="0" type="button">Sun</button>
+                <button class="pill" data-day="1" type="button">Mon</button>
+                <button class="pill" data-day="2" type="button">Tue</button>
+                <button class="pill" data-day="3" type="button">Wed</button>
+                <button class="pill" data-day="4" type="button">Thu</button>
+                <button class="pill" data-day="5" type="button">Fri</button>
+                <button class="pill" data-day="6" type="button">Sat</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
