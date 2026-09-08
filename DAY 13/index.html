@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Word Counter | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="wrapper">
+        <header class="header">
+            <h1>Live Word Counter</h1>
+            <p>Real-time word metrics, character counts, reading time, and text tools</p>
+        </header>
+
+        <!-- Stats Counter Panel -->
+        <section class="stats-panel">
+            <div class="stat-card highlight">
+                <h2 id="word-count" class="stat-num">0</h2>
+                <p class="stat-lbl">Words</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="char-count" class="stat-num">0</h2>
+                <p class="stat-lbl">Characters</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="char-no-space-count" class="stat-num">0</h2>
+                <p class="stat-lbl">No Spaces</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="sentence-count" class="stat-num">0</h2>
+                <p class="stat-lbl">Sentences</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="paragraph-count" class="stat-num">0</h2>
+                <p class="stat-lbl">Paragraphs</p>
+            </div>
+        </section>
+
+        <!-- Reading & Speaking Estimates -->
+        <section class="reading-info">
+            <div class="info-pill">
+                <span>📖 Reading Time:</span> <strong id="reading-time">0 sec</strong>
+            </div>
+            <div class="info-pill">
+                <span>🎙️ Speaking Time:</span> <strong id="speaking-time">0 sec</strong>
+            </div>
+        </section>
+
+        <!-- Textarea Editor -->
+        <section class="editor-section">
+            <textarea id="input-textarea" rows="10" placeholder="Type or paste your content here to calculate live word and character metrics..." aria-label="Input Text Content"></textarea>
+            
+            <div class="action-toolbar">
+                <div class="case-tools">
+                    <button id="btn-upper" class="btn-tool" type="button">UPPERCASE</button>
+                    <button id="btn-lower" class="btn-tool" type="button">lowercase</button>
+                    <button id="btn-title" class="btn-tool" type="button">Title Case</button>
+                </div>
+                <div class="primary-tools">
+                    <button id="btn-copy" class="btn-tool btn-primary" type="button">Copy Text</button>
+                    <button id="btn-clear" class="btn-tool btn-danger" type="button">Clear</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast">Text copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

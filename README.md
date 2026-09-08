@@ -20,6 +20,7 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **10** | **Input Character Counter** | HTML, CSS, JavaScript | ✅ Done | [Day 10](./DAY%2010/) |
 | **11** | **Image Slider** | HTML, CSS, JavaScript | ✅ Done | [Day 11](./DAY%2011/) |
 | **12** | **Day of the Week** | HTML, CSS, JavaScript | ✅ Done | [Day 12](./DAY%2012/) |
+| **13** | **Live Word Counter** | HTML, CSS, JavaScript | ✅ Done | [Day 13](./DAY%2013/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
