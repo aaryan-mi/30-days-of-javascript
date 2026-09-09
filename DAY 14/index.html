@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Video Slider | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="slider-wrapper">
+        <header class="slider-header">
+            <h1>Video Slider Experience</h1>
+            <p>Interactive cinematic video showcase with dynamic thumbnail navigation and playback controls</p>
+        </header>
+
+        <!-- Main Video Showcase Screen -->
+        <section class="video-stage" id="video-stage">
+            <video id="main-video" autoplay muted loop playsinline poster="assets/images/thumb1.jpg">
+                <source src="assets/videos/v1.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Video Overlay Gradient & Info -->
+            <div class="video-overlay">
+                <div class="slide-meta">
+                    <span class="slide-tag" id="slide-tag">NATURE & LANDSCAPES</span>
+                    <h2 class="slide-title" id="slide-title">Cascading Waterfalls</h2>
+                    <p class="slide-desc" id="slide-desc">Experience the serene power of natural cascades rushing through lush wilderness valleys.</p>
+                </div>
+
+                <!-- Custom Video Controls Bar -->
+                <div class="video-controls">
+                    <button id="btn-play-pause" class="ctrl-btn" aria-label="Play / Pause">
+                        <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                    </button>
+
+                    <div class="progress-bar-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+
+                    <button id="btn-mute" class="ctrl-btn" aria-label="Mute / Unmute">
+                        <svg id="mute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                            <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+                            <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </button>
+
+                    <button id="btn-fullscreen" class="ctrl-btn" aria-label="Fullscreen">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Previous / Next Floating Arrows -->
+            <button id="prev-btn" class="nav-arrow prev-arrow" aria-label="Previous Video">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="next-btn" class="nav-arrow next-arrow" aria-label="Next Video">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </section>
+
+        <!-- Thumbnails Strip Selector -->
+        <section class="thumbnails-strip" id="thumbnails-strip">
+            <div class="thumb-card active" data-index="0">
+                <div class="thumb-img-wrapper">
+                    <img src="assets/images/thumb1.jpg" alt="Waterfalls Thumbnail">
+                    <div class="thumb-play-overlay">&#9658;</div>
+                </div>
+                <div class="thumb-info">
+                    <h4>Cascading Waterfalls</h4>
+                    <span>Nature & Wilderness</span>
+                </div>
+            </div>
+
+            <div class="thumb-card" data-index="1">
+                <div class="thumb-img-wrapper">
+                    <img src="assets/images/thumb2.jpg" alt="Savannah Wildlife Thumbnail">
+                    <div class="thumb-play-overlay">&#9658;</div>
+                </div>
+                <div class="thumb-info">
+                    <h4>Savannah Pride</h4>
+                    <span>African Wildlife</span>
+                </div>
+            </div>
+
+            <div class="thumb-card" data-index="2">
+                <div class="thumb-img-wrapper">
+                    <img src="assets/images/thumb3.jpg" alt="Coastal Sunset Thumbnail">
+                    <div class="thumb-play-overlay">&#9658;</div>
+                </div>
+                <div class="thumb-info">
+                    <h4>Golden Sunset</h4>
+                    <span>Coastal Horizon</span>
+                </div>
+            </div>
+
+            <div class="thumb-card" data-index="3">
+                <div class="thumb-img-wrapper">
+                    <img src="assets/images/thumb4.jpg" alt="Botanical Bloom Thumbnail">
+                    <div class="thumb-play-overlay">&#9658;</div>
+                </div>
+                <div class="thumb-info">
+                    <h4>Botanical Bloom</h4>
+                    <span>Flora & Growth</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keyboard Shortcuts Hint -->
+        <footer class="slider-footer">
+            <span>Shortcuts: <strong>&larr; / &rarr;</strong> Switch Video &bull; <strong>Space</strong> Play/Pause &bull; <strong>M</strong> Mute</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
