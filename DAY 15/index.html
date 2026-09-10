@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode Character Inspector | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="inspector-wrapper">
+        <header class="header">
+            <h1>Unicode Character Inspector</h1>
+            <p>Real-time Unicode code point lookup, entity conversions, and character encoding analytics</p>
+        </header>
+
+        <!-- Input & Detection Area -->
+        <section class="input-section">
+            <div class="input-container">
+                <input type="text" id="char-input" placeholder="Type or paste any character..." value="A" autofocus aria-label="Input Character">
+                <button id="detect-btn" class="btn-detect" type="button">Inspect</button>
+            </div>
+
+            <!-- Quick Character Picker Pills -->
+            <div class="quick-picks" id="quick-picks">
+                <span class="picks-lbl">Quick Pick:</span>
+                <button class="pick-btn" data-char="A" type="button">A</button>
+                <button class="pick-btn" data-char="7" type="button">7</button>
+                <button class="pick-btn" data-char="@" type="button">@</button>
+                <button class="pick-btn" data-char="₹" type="button">₹</button>
+                <button class="pick-btn" data-char="€" type="button">€</button>
+                <button class="pick-btn" data-char="π" type="button">π</button>
+                <button class="pick-btn" data-char="★" type="button">★</button>
+                <button class="pick-btn" data-char="🚀" type="button">🚀</button>
+                <button class="pick-btn" data-char="🔥" type="button">🔥</button>
+                <button class="pick-btn" data-char="漢" type="button">漢</button>
+            </div>
+        </section>
+
+        <!-- Character Hero Showcase & Results Grid -->
+        <section class="results-container" id="results-container">
+            <div class="char-hero-card">
+                <div class="char-display" id="char-display">A</div>
+                <div class="char-meta">
+                    <span class="char-type-badge" id="char-type">Basic Latin (ASCII)</span>
+                    <span class="char-name-label" id="char-name">LATIN CAPITAL LETTER A</span>
+                </div>
+            </div>
+
+            <div class="code-cards-grid">
+                <div class="code-card" data-copy="hex">
+                    <span class="card-label">Unicode Hex</span>
+                    <strong id="val-hex" class="code-val">U+0041</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+
+                <div class="code-card" data-copy="decimal">
+                    <span class="card-label">Decimal Code</span>
+                    <strong id="val-decimal" class="code-val">65</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+
+                <div class="code-card" data-copy="html-dec">
+                    <span class="card-label">HTML Entity (Dec)</span>
+                    <strong id="val-html-dec" class="code-val">&amp;#65;</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+
+                <div class="code-card" data-copy="html-hex">
+                    <span class="card-label">HTML Entity (Hex)</span>
+                    <strong id="val-html-hex" class="code-val">&amp;#x41;</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+
+                <div class="code-card" data-copy="js-escape">
+                    <span class="card-label">JavaScript Escape</span>
+                    <strong id="val-js" class="code-val">\u0041</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+
+                <div class="code-card" data-copy="css-escape">
+                    <span class="card-label">CSS Escape</span>
+                    <strong id="val-css" class="code-val">\0041</strong>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
