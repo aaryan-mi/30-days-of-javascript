@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Application | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="dictionary-wrapper">
+        <header class="header">
+            <h1>Lexicon Dictionary</h1>
+            <p>Explore definitions, phonetics, audio pronunciations, examples, and synonyms</p>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="search-section">
+            <div class="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search any word (e.g., serendipity, resilience)..." value="serendipity" autofocus aria-label="Search word input">
+                <button id="search-btn" class="btn-search" type="button">Search</button>
+            </div>
+
+            <!-- Quick Word Discovery Pills -->
+            <div class="quick-words">
+                <span class="quick-lbl">Explore Words:</span>
+                <div class="pills-container">
+                    <button class="word-pill" data-word="serendipity" type="button">serendipity</button>
+                    <button class="word-pill" data-word="ephemeral" type="button">ephemeral</button>
+                    <button class="word-pill" data-word="resilience" type="button">resilience</button>
+                    <button class="word-pill" data-word="eloquent" type="button">eloquent</button>
+                    <button class="word-pill" data-word="solitude" type="button">solitude</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loading-state" style="display:none;">
+            <div class="spinner"></div>
+            <span>Fetching word definition & phonetics...</span>
+        </div>
+
+        <!-- Error State -->
+        <div class="error-state" id="error-state" style="display:none;">
+            <div class="error-icon">🔍</div>
+            <h3 id="error-title">Word Not Found</h3>
+            <p id="error-msg">Sorry, we couldn't find definitions for the word you entered.</p>
+        </div>
+
+        <!-- Results Card Container -->
+        <section class="result-container" id="result-container">
+            <!-- Word Header Banner -->
+            <div class="word-header">
+                <div class="word-details">
+                    <h2 id="word-title">serendipity</h2>
+                    <span class="phonetic-text" id="phonetic-text">/ˌsɛr.ənˈdɪp.ɪ.ti/</span>
+                </div>
+                <button id="audio-btn" class="btn-audio" aria-label="Play pronunciation audio" type="button">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Meanings & Definitions Feed -->
+            <div class="meanings-feed" id="meanings-feed"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

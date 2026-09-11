@@ -23,6 +23,7 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 | **13** | **Live Word Counter** | HTML, CSS, JavaScript | ✅ Done | [Day 13](./DAY%2013/) |
 | **14** | **Video Slider** | HTML5, CSS3, JavaScript, Video API | ✅ Done | [Day 14](./DAY%2014/) |
 | **15** | **Unicode Character Inspector** | HTML, CSS, JavaScript | ✅ Done | [Day 15](./DAY%2015/) |
+| **16** | **Dictionary Application** | HTML, CSS, JavaScript, REST API | ✅ Done | [Day 16](./DAY%2016/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
