@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Paragraph Generator | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="badge">
+                <i class="fa-solid fa-layer-group"></i> DAY 17 &bull; JAVASCRIPT
+            </div>
+            <h1 class="title">Random Paragraph Generator</h1>
+            <p class="subtitle">Generate curated placeholder text, thematic prose, and structured dummy content on demand.</p>
+        </header>
+
+        <!-- Main Configuration Card -->
+        <main class="generator-card">
+            <div class="controls-grid">
+                <!-- Count Stepper -->
+                <div class="control-group">
+                    <label for="count-input">
+                        <i class="fa-solid fa-hashtag"></i> Number of Paragraphs
+                    </label>
+                    <div class="stepper-wrapper">
+                        <button type="button" class="step-btn" id="btn-decrement" aria-label="Decrease count">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="number" id="count-input" min="1" max="10" value="3" aria-label="Paragraph count">
+                        <button type="button" class="step-btn" id="btn-increment" aria-label="Increase count">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Topic Selector -->
+                <div class="control-group">
+                    <label for="topic-select">
+                        <i class="fa-solid fa-shapes"></i> Content Category
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="topic-select">
+                            <option value="all">🌐 All Topics (Mixed Pool)</option>
+                            <option value="space">🪐 Deep Space & Cosmos</option>
+                            <option value="tech">⚡ Technology & AI</option>
+                            <option value="nature">🌿 Nature & Planetary Ecology</option>
+                            <option value="philosophy">🧠 Philosophy & Human Mind</option>
+                            <option value="lorem">📜 Classic Latin Lorem Ipsum</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-chevron"></i>
+                    </div>
+                </div>
+
+                <!-- Format Selector -->
+                <div class="control-group">
+                    <label for="format-select">
+                        <i class="fa-solid fa-code"></i> Output Format
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="format-select">
+                            <option value="plain">📄 Plain Text</option>
+                            <option value="html">🏷️ HTML &lt;p&gt; Tags</option>
+                            <option value="markdown">📝 Markdown Paragraphs</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-chevron"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Count Badges -->
+            <div class="quick-pills">
+                <span class="quick-label">Quick select:</span>
+                <button type="button" class="pill-btn" data-count="1">1 Para</button>
+                <button type="button" class="pill-btn active" data-count="3">3 Paras</button>
+                <button type="button" class="pill-btn" data-count="5">5 Paras</button>
+                <button type="button" class="pill-btn" data-count="8">8 Paras</button>
+                <button type="button" class="pill-btn" data-count="10">10 Paras</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-row">
+                <button type="button" id="btn-generate" class="btn btn-primary">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Paragraphs
+                </button>
+                <button type="button" id="btn-copy-all" class="btn btn-secondary">
+                    <i class="fa-regular fa-copy"></i> Copy All
+                </button>
+                <button type="button" id="btn-clear" class="btn btn-ghost">
+                    <i class="fa-solid fa-trash-can"></i> Clear
+                </button>
+            </div>
+
+            <!-- Metrics Bar -->
+            <div class="metrics-bar" id="metrics-bar">
+                <div class="metric-item">
+                    <span class="metric-label">Paragraphs</span>
+                    <span class="metric-value" id="stat-paragraphs">0</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <span class="metric-label">Words</span>
+                    <span class="metric-value" id="stat-words">0</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <span class="metric-label">Characters</span>
+                    <span class="metric-value" id="stat-chars">0</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <span class="metric-label">Est. Read Time</span>
+                    <span class="metric-value" id="stat-read-time">0 min</span>
+                </div>
+            </div>
+
+            <!-- Output Container -->
+            <div class="output-wrapper" id="output-wrapper">
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3>Ready to generate paragraphs</h3>
+                    <p>Select your desired topic, paragraph count, and output format above, then click <strong>Generate</strong>.</p>
+                </div>
+                <div class="paragraphs-list" id="paragraphs-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
