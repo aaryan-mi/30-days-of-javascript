@@ -1,6 +1,18 @@
-# 🚀 30 Days 30 JavaScript Projects Challenge
+# 🚀 30 Days of Vanilla JavaScript Challenge
 
-Welcome to the **30 Days 30 JavaScript Projects** repository! This repository documents my journey of building 30 distinct JavaScript projects to enhance my problem-solving skills and master core web development concepts (HTML5, CSS3, JavaScript/DOM Manipulation).
+<div align="center">
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Progress](https://img.shields.io/badge/Progress-18%20%2F%2030%20Days-6366F1?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)
+
+<p align="center">
+  A curated collection of <strong>30 interactive web applications</strong> built with vanilla JavaScript, modern CSS3 styling, and HTML5. Focused on DOM manipulation, asynchronous Web APIs, clean UI/UX design, and practical frontend problem-solving.
+</p>
+
+</div>
 
 ---
 
@@ -35,16 +47,17 @@ Welcome to the **30 Days 30 JavaScript Projects** repository! This repository do
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/aaryan-mi/30-DAYS-30-PROJECTS.git
+   git clone https://github.com/aaryan-mi/30-days-of-javascript.git
    ```
-2. **Navigate to the project folder:**
+2. **Navigate to the project directory:**
    ```bash
-   cd 30-DAYS-30-PROJECTS
+   cd 30-days-of-javascript
    ```
-3. **Open any day's project:**
-   Navigate into the respective day's folder (e.g., `DAY 01`) and open `index.html` in your browser.
+3. **Open any project:**
+   Navigate into any day's folder (e.g., `DAY 18`) and open `index.html` in your browser.
 
 ---
 
 ## 🤝 Connect & Feedback
-Feel free to star ⭐ the repository or submit issues/suggestions as I progress through the 30 days!
+
+Feel free to star ⭐ the repository or submit issues/suggestions as I progress through the challenge!
