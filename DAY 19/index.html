@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Joke Generator | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="badge">
+                <i class="fa-solid fa-robot"></i> DAY 19 &bull; JAVASCRIPT
+            </div>
+            <h1 class="title">Robot Joke Generator</h1>
+            <p class="subtitle">AI comic companion powered by live REST APIs, Speech Synthesis, and procedural robot audio.</p>
+        </header>
+
+        <!-- Main Robot Chat Card -->
+        <main class="robot-card">
+            <!-- Robot Character Status Bar -->
+            <div class="robot-status-bar">
+                <div class="robot-profile">
+                    <div class="robot-avatar-wrapper" id="robot-avatar">
+                        <!-- Custom Animated SVG Robot -->
+                        <svg class="robot-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Antenna -->
+                            <rect x="47" y="10" width="6" height="15" rx="3" fill="#6366f1"/>
+                            <circle id="antenna-light" cx="50" cy="8" r="6" fill="#06b6d4"/>
+                            
+                            <!-- Head Base -->
+                            <rect x="18" y="24" width="64" height="52" rx="14" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+                            <!-- Ears -->
+                            <rect x="10" y="40" width="8" height="18" rx="4" fill="#6366f1"/>
+                            <rect x="82" y="40" width="8" height="18" rx="4" fill="#6366f1"/>
+                            
+                            <!-- Screen Visor -->
+                            <rect x="26" y="32" width="48" height="26" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="2"/>
+                            
+                            <!-- LED Eyes -->
+                            <circle class="eye left-eye" cx="38" cy="45" r="5" fill="#38bdf8"/>
+                            <circle class="eye right-eye" cx="62" cy="45" r="5" fill="#38bdf8"/>
+
+                            <!-- Mouth / Equalizer Line -->
+                            <g class="mouth-eq" id="mouth-bars">
+                                <rect x="34" y="64" width="4" height="6" rx="2" fill="#38bdf8"/>
+                                <rect x="42" y="62" width="4" height="10" rx="2" fill="#38bdf8"/>
+                                <rect x="50" y="61" width="4" height="12" rx="2" fill="#38bdf8"/>
+                                <rect x="58" y="62" width="4" height="10" rx="2" fill="#38bdf8"/>
+                                <rect x="66" y="64" width="4" height="6" rx="2" fill="#38bdf8"/>
+                            </g>
+                        </svg>
+                        <span class="live-pulse"></span>
+                    </div>
+                    <div class="robot-info">
+                        <div class="name-row">
+                            <h3>CYBER-BOT 3000</h3>
+                            <span class="version-tag">v2.4</span>
+                        </div>
+                        <span class="status-indicator" id="robot-status-text">
+                            <span class="status-dot"></span> Online &amp; Armed with Puns
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Voice & Sound Controls -->
+                <div class="audio-controls">
+                    <button type="button" id="btn-voice-toggle" class="control-pill-btn active" title="Toggle Robot Voice Output">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>Voice: ON</span>
+                    </button>
+                    <button type="button" id="btn-sfx-toggle" class="control-pill-btn active" title="Toggle Robotic Sound Effects">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>SFX: ON</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Selector Tabs -->
+            <div class="category-tabs">
+                <span class="cat-label"><i class="fa-solid fa-layer-group"></i> Humor Mode:</span>
+                <div class="tab-list">
+                    <button type="button" class="tab-btn active" data-category="programming">💻 Code &amp; Tech</button>
+                    <button type="button" class="tab-btn" data-category="ai">🤖 AI &amp; Robotics</button>
+                    <button type="button" class="tab-btn" data-category="science">🧪 Science &amp; Math</button>
+                    <button type="button" class="tab-btn" data-category="dadjokes">☕ Dad Jokes &amp; Puns</button>
+                    <button type="button" class="tab-btn" data-category="random">🎲 Random Mix</button>
+                </div>
+            </div>
+
+            <!-- Chat Stream Box -->
+            <div class="chat-viewport" id="chat-container">
+                <!-- Messages will be rendered dynamically here -->
+            </div>
+
+            <!-- Input & Trigger Action Bar -->
+            <div class="chat-action-bar">
+                <button type="button" id="btn-joke" class="btn btn-primary">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Tell Me a Joke!</span>
+                </button>
+                <button type="button" id="btn-surprise" class="btn btn-secondary" title="Get a random surprise joke">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <span>Surprise Me</span>
+                </button>
+                <button type="button" id="btn-clear-chat" class="btn btn-ghost" title="Clear conversation history">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Copied joke to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
