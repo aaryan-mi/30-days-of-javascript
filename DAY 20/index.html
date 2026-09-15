@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Star Rating Component | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="badge">
+                <i class="fa-solid fa-star"></i> DAY 20 &bull; JAVASCRIPT
+            </div>
+            <h1 class="title">Star Rating &amp; Feedback</h1>
+            <p class="subtitle">Interactive rating widget featuring real-time mood feedback, animated stars, and persistent review tracking.</p>
+        </header>
+
+        <!-- Main Rating Card -->
+        <main class="rating-card" id="rating-card">
+            
+            <!-- Rating Form State -->
+            <div class="card-view" id="rating-form-view">
+                <div class="card-top">
+                    <span class="topic-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Experience Review</span>
+                    <span class="rating-count-badge" id="session-count-badge">0 reviews logged</span>
+                </div>
+
+                <div class="experience-prompt">
+                    <h2 class="prompt-title">How was your experience?</h2>
+                    <p class="prompt-desc">Tap a star to rate your satisfaction with our application.</p>
+                </div>
+
+                <!-- Star Rating Widget -->
+                <div class="star-rating-container" role="radiogroup" aria-label="Star rating out of 5">
+                    <div class="stars-track" id="stars-track">
+                        <button type="button" class="star-btn" data-rating="1" aria-label="1 Star">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="2" aria-label="2 Stars">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="3" aria-label="3 Stars">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="4" aria-label="4 Stars">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="5" aria-label="5 Stars">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Mood & Label Feedback -->
+                    <div class="rating-feedback" id="rating-feedback">
+                        <span class="feedback-emoji" id="feedback-emoji">✨</span>
+                        <div class="feedback-text-group">
+                            <span class="feedback-label" id="feedback-label">Select your rating</span>
+                            <span class="feedback-sub" id="feedback-sub">Hover or click any star to begin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Quick Chips (Visible after rating is selected) -->
+                <div class="feedback-details" id="feedback-details">
+                    <div class="chips-group">
+                        <label class="section-label">What did you like most?</label>
+                        <div class="chips-container" id="chips-container">
+                            <button type="button" class="chip-btn" data-tag="Speed">⚡ Fast Performance</button>
+                            <button type="button" class="chip-btn" data-tag="UI/UX">🎨 Clean UI/UX</button>
+                            <button type="button" class="chip-btn" data-tag="Ease">💡 Intuitive</button>
+                            <button type="button" class="chip-btn" data-tag="Reliable">🔒 Reliable</button>
+                            <button type="button" class="chip-btn" data-tag="Features">🚀 Feature Rich</button>
+                        </div>
+                    </div>
+
+                    <!-- Optional Feedback Note -->
+                    <div class="comment-group">
+                        <div class="label-row">
+                            <label for="feedback-comment" class="section-label">Leave an optional note</label>
+                            <span class="char-count" id="char-count">0 / 200</span>
+                        </div>
+                        <textarea id="feedback-comment" maxlength="200" placeholder="Tell us more about your experience..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="action-row">
+                    <button type="button" id="btn-submit" class="btn btn-primary" disabled>
+                        <span>Submit Feedback</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success / Submitted State -->
+            <div class="card-view hidden" id="rating-success-view">
+                <div class="success-icon-wrapper">
+                    <div class="success-sparkle"></div>
+                    <i class="fa-solid fa-circle-check success-icon"></i>
+                </div>
+                <h2 class="success-title">Thank You for Your Feedback!</h2>
+                <p class="success-desc" id="success-summary-text">Your rating helps us improve every day.</p>
+                
+                <div class="submitted-rating-preview">
+                    <div class="submitted-stars" id="submitted-stars-display">
+                        <!-- Render submitted stars -->
+                    </div>
+                    <span class="submitted-score" id="submitted-score-text">5.0 / 5.0</span>
+                </div>
+
+                <div class="success-actions">
+                    <button type="button" id="btn-edit" class="btn btn-secondary">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit Rating
+                    </button>
+                    <button type="button" id="btn-new-rating" class="btn btn-primary">
+                        <i class="fa-solid fa-rotate-right"></i> Submit Another
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rating History Breakdown Stats -->
+            <div class="stats-drawer">
+                <div class="stats-header" id="stats-header-toggle">
+                    <span class="stats-title"><i class="fa-solid fa-chart-simple"></i> Community Ratings Breakdown</span>
+                    <i class="fa-solid fa-chevron-down toggle-icon" id="stats-chevron"></i>
+                </div>
+                <div class="stats-content" id="stats-content">
+                    <div class="stats-summary-box">
+                        <span class="avg-score" id="stat-avg-score">4.8</span>
+                        <div class="avg-stars-row" id="stat-avg-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="total-ratings-label" id="stat-total-count">Based on 124 reviews</span>
+                    </div>
+                    <div class="bars-list" id="stats-bars">
+                        <!-- Dynamic Distribution Bars -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Feedback submitted successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
