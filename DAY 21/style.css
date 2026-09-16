@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.35) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #09090b 0%, #17112d 40%, #2e0854 75%, #0f172a 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-random-password {
+    width: 100%;
+    max-width: 580px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 44px 38px;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(168, 85, 247, 0.15);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #e879f9;
+    background: rgba(232, 121, 249, 0.12);
+    border: 1px solid rgba(232, 121, 249, 0.28);
+    border-radius: 9999px;
+    margin-bottom: 22px;
+}
+
+.container h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+.container h1 span {
+    background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #ec4899;
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+
+.display {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.display:focus-within {
+    border-color: #a855f7;
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+}
+
+.display input {
+    border: 0;
+    outline: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: 1.5px;
+    flex: 1;
+    background: transparent;
+    user-select: all;
+}
+
+.display input::placeholder {
+    color: #94a3b8;
+    font-size: 17px;
+    letter-spacing: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+}
+
+.display button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #6366f1;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.display button:hover {
+    color: #ec4899;
+    transform: scale(1.15);
+    background: rgba(236, 72, 153, 0.1);
+}
+
+.container button#btn {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.container button#btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(236, 72, 153, 0.45);
+    filter: brightness(1.08);
+}
+
+.container button#btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(168, 85, 247, 0.35);
+}
+
+@media (max-width: 600px) {
+    .container-random-password {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .display input {
+        font-size: 17px;
+    }
+
+    .container button#btn {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+}

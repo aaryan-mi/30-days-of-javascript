@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Progress](https://img.shields.io/badge/Progress-20%20%2F%2030%20Days-6366F1?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-21%20%2F%2030%20Days-6366F1?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)
 
 <p align="center">
@@ -40,6 +40,7 @@
 | **18** | **CSS Changer Studio** | HTML, CSS, JavaScript, CSS Variables | ✅ Done | [Day 18](./DAY%2018/) |
 | **19** | **Robot Joke Generator** | HTML, CSS, JavaScript, Web Speech API | ✅ Done | [Day 19](./DAY%2019/) |
 | **20** | **Star Rating Component** | HTML, CSS, JavaScript, LocalStorage | ✅ Done | [Day 20](./DAY%2020/) |
+| **21** | **Random Password Generator** | HTML, CSS, JavaScript, Clipboard API | ✅ Done | [Day 21](./DAY%2021/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
