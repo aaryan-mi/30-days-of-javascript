@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Progress](https://img.shields.io/badge/Progress-23%20%2F%2030%20Days-6366F1?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-24%20%2F%2030%20Days-6366F1?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)
 
 <p align="center">
@@ -43,6 +43,7 @@
 | **21** | **Random Password Generator** | HTML, CSS, JavaScript, Clipboard API | ✅ Done | [Day 21](./DAY%2021/) |
 | **22** | **Random Number Generator** | HTML, CSS, JavaScript, Math API | ✅ Done | [Day 22](./DAY%2022/) |
 | **23** | **Prime Number Checker** | HTML, CSS, JavaScript, Algorithms | ✅ Done | [Day 23](./DAY%2023/) |
+| **24** | **Counter Application** | HTML, CSS, JavaScript, DOM Events | ✅ Done | [Day 24](./DAY%2024/) |
 | **...** | ... | - | - | - |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
