@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="editor-header">
+        <div class="badge">
+            <i class="fa-solid fa-code"></i>
+            <span>DAY 28 &bull; JAVASCRIPT</span>
+        </div>
+        <h1>Live <span>Code Editor</span></h1>
+        <p class="subtitle">Interactive HTML, CSS, and JavaScript workspace with instant live rendering.</p>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="box html-box">
+                <label for="html-code"><i class="fa-brands fa-html5"></i><span>HTML</span></label>
+                <textarea id="html-code" spellcheck="false" placeholder="Write HTML here..."></textarea>
+            </div>
+
+            <div class="box css-box">
+                <label for="css-code"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></label>
+                <textarea id="css-code" spellcheck="false" placeholder="Write CSS here..."></textarea>
+            </div>
+
+            <div class="box js-box">
+                <label for="js-code"><i class="fa-brands fa-js"></i><span>JavaScript</span></label>
+                <textarea id="js-code" spellcheck="false" placeholder="Write JavaScript here..."></textarea>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="box output-box">
+                <label for="output"><i class="fa-solid fa-play"></i><span>Live Preview</span></label>
+                <iframe id="output"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
