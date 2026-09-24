@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Progress](https://img.shields.io/badge/Progress-28%20%2F%2030%20Days-6366F1?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-29%20%2F%2030%20Days-6366F1?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)
 
 <p align="center">
@@ -48,7 +48,7 @@
 | **26** | **Date and Time Widget** | HTML, CSS, JavaScript, Timers | ✅ Done | [Day 26](./DAY%2026/) |
 | **27** | **Advanced Image Carousel** | HTML, CSS, JavaScript, DOM Manipulation | ✅ Done | [Day 27](./DAY%2027/) |
 | **28** | **Live Code Editor** | HTML, CSS, JavaScript, Iframe API | ✅ Done | [Day 28](./DAY%2028/) |
-| **...** | ... | - | - | - |
+| **29** | **Poll System Application** | HTML, CSS, JavaScript, Forms | ✅ Done | [Day 29](./DAY%2029/) |
 | **30** | *Coming Soon* | - | ⏳ Pending | - |
 
 ---

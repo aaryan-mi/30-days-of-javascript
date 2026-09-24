@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll System Application | 30 Days JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="badge">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <span>DAY 29 &bull; JAVASCRIPT</span>
+        </div>
+        <h1>Interactive <span>Poll System</span></h1>
+        
+        <div class="poll">
+            <h2>What is your favorite programming language?</h2>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" id="option1" name="poll" value="option1">
+                    <label for="option1">
+                        <i class="fa-brands fa-js icon-js"></i>
+                        <span>JavaScript</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option2" name="poll" value="option2">
+                    <label for="option2">
+                        <i class="fa-brands fa-python icon-py"></i>
+                        <span>Python</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option3" name="poll" value="option3">
+                    <label for="option3">
+                        <i class="fa-brands fa-java icon-java"></i>
+                        <span>Java</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option4" name="poll" value="option4">
+                    <label for="option4">
+                        <i class="fa-solid fa-code icon-cpp"></i>
+                        <span>C++</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button onclick="submitVote()">
+                <i class="fa-solid fa-check-to-slot"></i>
+                <span>Submit Vote</span>
+            </button>
+            
+            <div id="result"></div>
+        </div>
+    </div>
+       
+    <script src="script.js"></script>
+</body>
+</html>
